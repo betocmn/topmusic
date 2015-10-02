@@ -32,7 +32,9 @@ A plain PHP/Angular JS app to list top artists and music by country, using LAST.
 ### Cloning the code
 
 1. Clone the GIT Repository using the following command:
-    `git clone https://github.com/humbertomn/topmusic.git ~/topmusic`
+    ```
+    git clone https://github.com/humbertomn/topmusic.git ~/topmusic
+    ```
 
     PS: If you want to install anywhere on your system, change the path: "~/topmusic"
 
@@ -55,10 +57,12 @@ A plain PHP/Angular JS app to list top artists and music by country, using LAST.
     ```
 
 4. Run the following command to configure your environment (Make sure you're still in the 'infra' folder).
-    `python helper.py config site on local`
+    ```
+    python helper.py config site on local
+    ```
 
     The helper.py script will install all needed packages on your local environment, such as apache and git.
 
 
 ### Testing
-To make sure it works open up [http://localhost:8080/]
+To make sure it works open up http://localhost:8080/

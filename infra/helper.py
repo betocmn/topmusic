@@ -250,8 +250,13 @@ def config( args ):
             "sudo mkdir -p {0}".format( PROJECT_ROOT ),
             "sudo chown {0}:{1} {2}".format( SERVERS[ server ][ "DEFAULT_USER" ], DEFAULT_USER_GROUP, PROJECT_ROOT ),
             "sudo chgrp -R {0} {1}".format( DEFAULT_USER_GROUP, PROJECT_ROOT ),
+            "cd {0}".format( PROJECT_ROOT ),
+            "sudo mkdir -p {0}".format( PHP_ROOT ),
+            "sudo chown -R {0}:{1} {2}".format( SERVERS[ server ][ "DEFAULT_USER" ], DEFAULT_USER_GROUP, PHP_ROOT ),
+            "sudo chgrp -R {0} {1}".format( DEFAULT_USER_GROUP, PHP_ROOT ),
         ])
         remote_commands.append( "echo \"   ...DONE!\"" )
+
 
 
         ######################################
