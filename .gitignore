@@ -1,0 +1,6 @@
+*/.idea
+*/.idea/*
+infra/.vagrant
+.idea/
+.idea/*
+.DS_Store
