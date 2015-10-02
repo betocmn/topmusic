@@ -2,15 +2,13 @@
 A plain PHP/Angular JS app to list top artists and music by country, using LAST.FM'S api
 
 
-### Technologies and Tools Used
+### Technologies Used
 
 #### Back-End
 - PHP >= 5.4
 
 #### Front-End
-- HTML
-- CSS
-- Javascript
+- Angular JS (HTML, CSS, JAVASCRIPT)
 
 #### Server Side
 - Ubuntu 14.0.4

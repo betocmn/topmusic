@@ -43,7 +43,7 @@ SERVERS = {
     },
 
     "dev" : {
-        "IP" : "54.94.211.154",                 # The IP address of the server.
+        "IP" : "54.94.128.242",                 # The IP address of the server.
         "DOMAIN" : "topmusic.humbertomn.com",   # Server's domain name.
         "KEYPAIR" : "topmusic.pem",             # The keypair file used to connect to the server.
         "DEFAULT_USER" : "ubuntu",              # The default user and user group of the server.
