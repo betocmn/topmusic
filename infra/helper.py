@@ -37,7 +37,7 @@ SERVERS = {
         "DEFAULT_USER" : "vagrant",     # The default user and user group of the server.
         "HTTP_PORT" : 80,               # The HTTP port on the server.
         "HTTPS_PORT" : 443,             # The HTTPS port on the server.
-        "HTTP_FORWARDED_PORT" : 80,     # The HTTP forwarded port
+        "HTTP_FORWARDED_PORT" : 8080,   # The HTTP forwarded port
         "HTTPS_FORWARDED_PORT" : 4443,  # The HTTPS forwarded port
         "BRANCH" : "master",            # Vagrant server doesn't require git
     },
