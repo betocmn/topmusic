@@ -45,7 +45,7 @@ SERVERS = {
     "dev" : {
         "IP" : "54.94.211.154",                 # The IP address of the server.
         "DOMAIN" : "topmusic.humbertomn.com",   # Server's domain name.
-        "KEYPAIR" : "topmusicaws.pem",          # The keypair file used to connect to the server.
+        "KEYPAIR" : "topmusic.pem",             # The keypair file used to connect to the server.
         "DEFAULT_USER" : "ubuntu",              # The default user and user group of the server.
         "HTTP_PORT" : 80,                       # The HTTP port on the server.
         "HTTPS_PORT" : 443,                     # The HTTPS port on the server.
