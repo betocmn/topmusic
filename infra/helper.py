@@ -122,6 +122,8 @@ WIKI_CONF = """
         DocumentRoot {php_root}
         <Directory {php_root}>
             Require all granted
+            AllowOverride All
+            Allow from all
         </Directory>
     </VirtualHost>
 """
