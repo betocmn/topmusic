@@ -1,4 +1,10 @@
 RewriteEngine On
+
+# Forces Trailing Slash
+RewriteCond %{REQUEST_URI}  !\.(php|html|css|jpg|gif|png)$
+RewriteRule ^(.*)([^/])$ http://%{HTTP_HOST}/$1$2/ [L,R=301]
+
+# Redirects all request to index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.+)$ index.php [L]
