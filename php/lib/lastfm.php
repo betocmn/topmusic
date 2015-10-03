@@ -23,18 +23,18 @@ class LastFm implements MusicVendor {
      */
     private $key = null;
 
-	/**
-	 * Constructor.
-	 * Sets class atributes
-	 * 
-	 * @param String[Required] $url
-	 * @param String[Required] $key
-	 * @access public
-	 */
-	public function __construct( $url, $key ){
-		$this->url = $url;
+    /**
+     * Constructor.
+     * Sets class atributes
+     *
+     * @param String[Required] $url
+     * @param String[Required] $key
+     * @access public
+     */
+    public function __construct( $url, $key ){
+        $this->url = $url;
         $this->key = $key;
-	}
+    }
 
     /**
      * Constructor.
@@ -60,24 +60,24 @@ class LastFm implements MusicVendor {
         return new SimpleXMLElement( $xml );
 
     }
-	
-	/**
-	 * Returns artists per country name
-	 *
-	 * @param String[Required] $country
-	 * @param Int[Optional] $page
-	 * @param Int[Optional] $limit
-	 * @access public
-	 * @return Array
-	 */
-	public function getTopArtists( $country, $page = 1, $limit = 50 ){
+
+    /**
+     * Returns artists per country name
+     *
+     * @param String[Required] $country
+     * @param Int[Optional] $page
+     * @param Int[Optional] $limit
+     * @access public
+     * @return Array
+     */
+    public function getTopArtists( $country, $page = 1, $limit = 50 ){
 
         // Prepares params
-		$data['method'] = 'geo.gettopartists';
-		$data['country'] = urlencode( $country );
-		$data['page'] = urlencode( $page );
-		$data['limit'] = 5;
-		$data['api_key'] = urlencode( $this->key );
+        $data['method'] = 'geo.gettopartists';
+        $data['country'] = urlencode( $country );
+        $data['page'] = urlencode( $page );
+        $data['limit'] = 5;
+        $data['api_key'] = urlencode( $this->key );
 
         // Sends request
         $xml = $this->sendRequest( $data );
@@ -96,16 +96,16 @@ class LastFm implements MusicVendor {
             );
         }
         return $response;
-	}
+    }
 
-	/**
-	 * Returns details from an artist ID
-	 *
-	 * @param String[Required] $id
-	 * @access public
-	 * @return Array
-	 */
-	public function getArtistDetails( $id ){
+    /**
+     * Returns details from an artist ID
+     *
+     * @param String[Required] $id
+     * @access public
+     * @return Array
+     */
+    public function getArtistDetails( $id ){
 
         // Prepares params
         $data['method'] = 'artist.getinfo';
@@ -122,7 +122,7 @@ class LastFm implements MusicVendor {
         $response['id'] = (string) $xml->artist->mbid;
         return $response;
 
-	}
+    }
 
     /**
      * Returns top tracks by artist ID

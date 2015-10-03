@@ -18,39 +18,39 @@ require_once( "lib/spotify.php" );
 
 abstract class Base {
 
-	/**
-	 * Class Attributes
-	 *
-	 * @var String
-	 */
-	protected $api = '';
+    /**
+     * Class Attributes
+     *
+     * @var String
+     */
+    protected $api = '';
 
-	/**
-	 * Constructor.
-	 * Instantiates the vendor API specified on settings
-	 *
-	 * @access public
-	 */
-	public function __construct( $data = null ){
+    /**
+     * Constructor.
+     * Instantiates the vendor API specified on settings
+     *
+     * @access public
+     */
+    public function __construct( $data = null ){
 
-		if ( API_VENDOR == 'lastfm' ){
-			$this->api = new LastFm( API_URL, API_KEY );
-		} else if ( API_VENDOR == 'spotify' ){
-			$this->api = new Spotify( API_URL, API_KEY );
-		}
+        if ( API_VENDOR == 'lastfm' ){
+            $this->api = new LastFm( API_URL, API_KEY );
+        } else if ( API_VENDOR == 'spotify' ){
+            $this->api = new Spotify( API_URL, API_KEY );
+        }
 
-	}
+    }
 
-	/**
-	 * Returns the 3rd party music API
-	 *
-	 * @access public
-	 * @return Object
-	 */
-	public function getApi() {
+    /**
+     * Returns the 3rd party music API
+     *
+     * @access public
+     * @return Object
+     */
+    public function getApi() {
 
-		return $this->api;
+        return $this->api;
 
-	}
+    }
 
 }
