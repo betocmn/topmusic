@@ -78,7 +78,7 @@ APP_NAME = "topmusic"                                       # Current project ma
 # Packages to be installed for PHP Development
 PHP_PACKAGES = [
     "apache2", "libapache2-mod-php5", "php5-mysql",
-    "libmysqlclient-dev", "mysql-client"
+    "libmysqlclient-dev", "mysql-client", "git"
 ]
 
 
