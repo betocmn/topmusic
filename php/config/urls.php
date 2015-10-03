@@ -15,10 +15,10 @@ define( "URL_BASE", MODE == 'local' ? URL_LOCAL : URL_REMOTE );
 $URLS = array(
 
     '/' => array(
-        'name' => 'home', 'controller' => 'ArtistController', 'method' => 'get_listing'
+        'name' => 'home', 'controller' => 'ArtistController', 'method' => 'getListing'
     ),
-    '/artist/details/([0-9]*)/' => array(
-        'name' => 'artist_details', 'controller' => 'ArtistController', 'method' => 'get_details'
-    ),
+    '/artist/details/([0-9a-z-]*)/' => array(
+        'name' => 'artist_details', 'controller' => 'ArtistController', 'method' => 'getDetails'
+    )
 
 );

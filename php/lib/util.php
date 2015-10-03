@@ -18,7 +18,13 @@ function get_url_data( $urls ){
     $path = $_SERVER['REQUEST_URI'];
     foreach ( $urls as $key => $value ){
         $regex = "#^{$key}$#";
-        if ( preg_match( $regex, $path ) ){
+        $result = preg_match( $regex, $path, $matches );
+        if ( $result ){
+            $value['params'] = array();
+            if ( sizeof( $matches ) > 1 ){
+                unset( $matches[0] );
+                $value['params'] = array_values( $matches );
+            }
             return $value;
         }
     }

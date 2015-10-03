@@ -18,7 +18,7 @@ if ( sizeof( $url_info ) ) {
     require_once ( "controllers/" . get_controller_file_name( $url_info['controller'] ) );
     $method = array( $url_info['controller'], $url_info['method'] );
     if ( is_callable( $method ) ) {
-        call_user_func( $method );
+        call_user_func_array( $method, $url_info['params'] );
         exit();
     }
 
