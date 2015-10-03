@@ -1,7 +1,7 @@
 RewriteEngine On
 
 # Forces Trailing Slash
-RewriteCond %{REQUEST_URI}  !\.(php|js|html|css|jpg|gif|png)$
+RewriteCond %{REQUEST_URI}  !\.(php|js|ico|html|css|jpg|gif|png)$
 RewriteRule ^(.*)([^/])$ http://%{HTTP_HOST}/$1$2/ [L,R=301]
 
 # Redirects all request to index.php
