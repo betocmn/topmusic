@@ -11,9 +11,9 @@
  * @package models
  * @access public
  */
-require_once(  "config/settings.php" );
-require_once(  "lib/lastfm.php" );
-require_once(  "lib/spotify.php" );
+require_once( "config/settings.php" );
+require_once( "lib/lastfm.php" );
+require_once( "lib/spotify.php" );
 
 
 abstract class Base {

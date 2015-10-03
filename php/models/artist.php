@@ -4,7 +4,7 @@
  *
  * This class will connect to one of the vendors APIs (lastfm, etc)
  * to get information from musicians around the world.
- * 
+ *
  * @author Humberto Moreira <humberto.mn@gmail.com>
  * @package models
  * @access public
@@ -15,38 +15,38 @@ require_once( "config/settings.php" );
 
 class Artist extends Base {
 
-	/**
+    /**
      * Name of Artist
      * @var string
      */
-	public $name = null;
+    public $name = null;
 
-	/**
-	 * URL of image for the the Artist
-	 * @var string
-	 */
-	public $imgUrl = null;
+    /**
+     * URL of image for the the Artist
+     * @var string
+     */
+    public $imgUrl = null;
 
 
-	/**
-	 * Constructor.
-	 * Calls parent constructor to set correct vendor API
-	 * 
-	 * @access public
-	 */
-	public function __construct(){
-		parent::__construct();
-	}
-	
-	/**
-	 * Get artist's name
-	 *
-	 * @access public
-	 * @return String
-	 */
-	public function getName(){
+    /**
+     * Constructor.
+     * Calls parent constructor to set correct vendor API
+     *
+     * @access public
+     */
+    public function __construct(){
+        parent::__construct();
+    }
+
+    /**
+     * Get artist's name
+     *
+     * @access public
+     * @return String
+     */
+    public function getName(){
         return $this->name;
-	}
+    }
 
     /**
      * Set artist's name
@@ -118,6 +118,7 @@ class Artist extends Base {
      * @return String
      */
     public function getTopTracks( $id ){
+
         $api = $this->getApi();
         return $api->getTopTracks( $id );
 
