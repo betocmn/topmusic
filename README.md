@@ -6,8 +6,6 @@ A plain PHP/Angular JS app to list top artists and music by country, using LAST.
 - Flexible to give support to any other vendor's API (last.fm, spotify, etc...)
 - Angular JS for the views
 
-You can check a live demo at http://topmusic.humbertomn.com/
-
 
 ### Technologies Used
 
